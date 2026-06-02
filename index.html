@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De la Geometría a la Gravedad Cuántica - Scrolltelling Interactivo</title>
+  <meta name="description" content="Una ruta pedagógica completa e interactiva para entender la física teórica desde los vectores hasta el espaciotiempo y la gravedad cuántica.">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- MathJax Configuración y Carga -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+  <!-- Canvas de Rejilla Espacio-Temporal Interactivo -->
+  <canvas id="spacetime-canvas"></canvas>
+
+  <!-- CABECERA & NAVEGACIÓN -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-dot"></div>
+        <span>Geometría & Gravedad</span>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--accent-cyan)">
+        Ruta Pedagógica Completa
+      </div>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progress-indicator"></div>
+    </div>
+  </header>
+
+  <!-- NAVEGACIÓN POR DOTS LATERALES -->
+  <div class="dots-nav" id="dots-navigation">
+    <!-- Generado dinámicamente con JS -->
+  </div>
+
+  <!-- SECCIÓN HERO -->
+  <section class="hero" id="hero-section">
+    <p class="hero-subtitle">El Viaje de la Unificación</p>
+    <h1 class="hero-title">De la Geometría a la<br><em>Gravedad Cuántica</em></h1>
+    <p class="hero-description">
+      Una expedición visual e interactiva por las ideas más profundas de la física teórica. Aprende cómo la naturaleza dibuja sus leyes mediante la geometría, el principio de acción y las simetrías.
+    </p>
+    <div class="scroll-indicator">
+      <span>Desplázate para comenzar</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENEDOR PRINCIPAL DE SCROLLTELLING -->
+  <main class="scroll-container" id="content-container">
+
+    <!-- FASE 0 -->
+    <section class="phase-section reveal" id="fase-0" data-label="Fase 0: Pensar">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 00</span>
+          <h2 class="phase-title">Cómo piensa la naturaleza</h2>
+        </div>
+        <p>
+          ¿Qué es una ley física? No es un decreto del universo ni un conjunto de ecuaciones arbitrarias escritas en un pizarrón. Es una <b>simplificación suprema</b>. Cuando Galileo observaba esferas rodar por planos inclinados, o cuando Newton descifraba la caída de una manzana y el órbita cósmica bajo la misma fórmula, no estaban inventando leyes: estaban descubriendo <b>patrones de simetría</b> en la naturaleza.
+        </p>
+        <p>
+          La física piensa buscando la economía del universo. Se rige bajo la búsqueda de patrones invariables en un universo aparentemente caótico. Predecir (saber dónde caerá una piedra) es útil, pero **explicar** (entender por qué las trayectorias son curvas y no cuadradas) es el verdadero triunfo de la razón.
+        </p>
+        <div class="quote-box">
+          "La naturaleza es simple y se deleita en la simplicidad."
+          <span class="quote-author">Isaac Newton</span>
+        </div>
+        <p>
+          Para emprender este viaje, adoptaremos las mentes de cuatro gigantes:
+        </p>
+        <ul>
+          <li><b>Galileo:</b> Quien nos enseñó a interrogar a la naturaleza con experimentos simplificados.</li>
+          <li><b>Newton:</b> Quien tradujo el cambio continuo al lenguaje del cálculo.</li>
+          <li><b>Einstein:</b> Quien descubrió que el escenario del espacio y el tiempo es en realidad un actor dinámico.</li>
+          <li><b>Feynman:</b> Quien nos mostró que el universo explora todas las posibilidades simultáneamente.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FASE 1 -->
+    <section class="phase-section reveal" id="fase-1" data-label="Fase 1: Geometría">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 01</span>
+          <h2 class="phase-title">La Geometría del Movimiento</h2>
+        </div>
+        <p>
+          Antes de las matemáticas, existe la dirección. Imagina que cierras los ojos y das tres pasos en línea recta. Luego giras a la derecha y das cuatro pasos más. Tu cuerpo ha trazado un cambio en el espacio. El concepto de **desplazamiento** no necesita ecuaciones: es una flecha que conecta tu inicio con tu final.
+        </p>
+        <p>
+          Llamamos a estas flechas **vectores**. Tienen un tamaño (magnitud) y una orientación (dirección). El movimiento no es más que el cambio continuo de estos vectores a lo largo del tiempo.
+        </p>
+        <div class="concept-box">
+          <div class="concept-title">
+            <span style="display:inline-block; width:12px; height:12px; background:var(--accent-cyan); border-radius:50%"></span>
+            Idea Fuerza: El Cambio Dinámico
+          </div>
+          <p>
+            La <b>velocidad</b> no es solo rapidez; es la flecha que indica hacia dónde te diriges *en este mismo instante*. La <b>aceleración</b> es la fuerza invisible que tira de esa flecha para cambiar su dirección o su longitud. Todo el ballet del cosmos puede resumirse en flechas empujando a otras flechas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 2 -->
+    <section class="phase-section reveal" id="fase-2" data-label="Fase 2: Polares">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 02</span>
+          <h2 class="phase-title">Coordenadas Polares</h2>
+        </div>
+        <p>
+          Las coordenadas cartesianas (el clásico eje \(x\) e \(y\)) son una invención humana, una cuadrícula artificial que imponemos al mundo. A una manzana que cae le da igual dónde esté el origen de tu cuadrícula horizontal.
+        </p>
+        <p>
+          Imagina un faro en medio del océano y un barco dando vueltas a su alrededor. Si describimos la posición del barco usando cuadrículas cartesianas, las fórmulas se vuelven confusas y llenas de raíces cuadradas. Pero si medimos la distancia directa al faro (\(r\)) y el ángulo respecto al norte (\(\theta\)), la descripción matemática se vuelve limpia y orgánica.
+        </p>
+        <p>
+          Las **coordenadas polares** nos enseñan una lección profunda: <b>la geometría del problema debe dictar nuestras coordenadas</b>, no nuestros hábitos de dibujo. Al elegir coordenadas que respeten las simetrías físicas de un sistema, la matemática se simplifica milagrosamente.
+        </p>
+      </div>
+    </section>
+
+    <!-- FASE 3 -->
+    <section class="phase-section reveal" id="fase-3" data-label="Fase 3: Energía">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 03</span>
+          <h2 class="phase-title">La Energía como Lenguaje</h2>
+        </div>
+        <p>
+          Newton nos enseñó a pensar en términos de **fuerzas**. Pero las fuerzas son vectoriales: cambian de dirección constantemente, lo que dificulta los cálculos. Existe un lenguaje más profundo y universal: el de la **Energía**.
+        </p>
+        <p>
+          La energía es una cantidad escalar: un simple número. La naturaleza opera como un contable meticuloso con dos cuentas bancarias:
+        </p>
+        <ul>
+          <li><b>Energía Cinética (\(T\)):</b> El dinero líquido en movimiento, proporcional al cuadrado de la velocidad: \(T = \frac{1}{2}mv^2\).</li>
+          <li><b>Energía Potencial (\(V\)):</b> El dinero ahorrado en inversiones o depósitos gravitationacionales, esperando ser liberado según la posición.</li>
+        </ul>
+        <p>
+          En sistemas conservativos, la naturaleza permite transacciones ilimitadas entre estas cuentas, pero el balance general —la energía total \(E = T + V\)— permanece **estrictamente constante**.
+        </p>
+
+        <!-- Simulador 1: Péndulo y Espacio de Fases (Fase 3/10) -->
+        <div class="simulation-card" id="sim-pendulum-card">
+          <div class="simulation-header">
+            <div class="simulation-title">
+              <span style="display:inline-block; width:10px; height:10px; background:var(--accent-cyan); border-radius:50%; box-shadow:0 0 8px var(--accent-cyan)"></span>
+              Laboratorio: Energía y Espacio de Fases del Péndulo
+            </div>
+            <button class="btn-sim" id="pendulum-play">Pausar</button>
+          </div>
+          <div class="simulation-body">
+            <div class="simulation-canvas-wrapper">
+              <canvas id="pendulum-canvas" class="simulation-canvas"></canvas>
+            </div>
+            <div class="simulation-controls">
+              <div>
+                <div class="control-group">
+                  <div class="control-label">
+                    <span>Longitud del Hilo (\(L\))</span>
+                    <span class="control-value" id="val-pendulum-l">1.5m</span>
+                  </div>
+                  <input type="range" id="param-pendulum-l" min="0.5" max="2.5" step="0.1" value="1.5">
+                </div>
+                <div class="control-group">
+                  <div class="control-label">
+                    <span>Fricción / Amortiguamiento</span>
+                    <span class="control-value" id="val-pendulum-d">0.00</span>
+                  </div>
+                  <input type="range" id="param-pendulum-d" min="0" max="0.1" step="0.01" value="0">
+                </div>
+                <div class="control-group">
+                  <div class="control-label">
+                    <span>Ángulo Inicial (\(\theta_0\))</span>
+                    <span class="control-value" id="val-pendulum-theta">45°</span>
+                  </div>
+                  <input type="range" id="param-pendulum-theta" min="-90" max="90" step="5" value="45">
+                </div>
+              </div>
+              <div class="simulation-stats">
+                <div class="stat-box">
+                  <div class="stat-label">Energía Cinética (T)</div>
+                  <div class="stat-val" id="stat-kin">0.00 J</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">Energía Potencial (V)</div>
+                  <div class="stat-val" id="stat-pot">0.00 J</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 4 -->
+    <section class="phase-section reveal" id="fase-4" data-label="Fase 4: Mínima Acción">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 04</span>
+          <h2 class="phase-title">El Principio de Mínima Acción</h2>
+        </div>
+        <p>
+          Si lanzas una pelota a un amigo, ¿por qué traza una parábola exacta y no un zig-zag caprichoso? La física newtoniana nos dice que es por la atracción de la gravedad en cada instante de tiempo.
+        </p>
+        <p>
+          Pero existe una visión más global y poética. Pierre de Fermat descubrió que cuando la luz viaja de un punto a otro a través de diferentes medios (como el aire y el agua), no toma cualquier camino: toma el camino que **minimiza el tiempo de viaje**. Esta búsqueda de optimización inspiró a matemáticos como Maupertuis, Euler y Lagrange a postular que toda la materia actúa igual.
+        </p>
+        <p>
+          La naturaleza no calcula fuerzas paso a paso. En su lugar, parece "evaluar" todas las trayectorias posibles y elegir aquella que optimiza una cantidad global: la **Acción**.
+        </p>
+        <div class="quote-box">
+          "El camino clásico tomado por la naturaleza es tal que la acción es estacionaria."
+          <span class="quote-author">Leonhard Euler</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 5 -->
+    <section class="phase-section reveal" id="fase-5" data-label="Fase 5: Lagrangiano">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 05</span>
+          <h2 class="phase-title">El Lagrangiano \( L = T - V \)</h2>
+        </div>
+        <p>
+          La energía total del universo es \(T + V\). Pero Lagrange introdujo una nueva función que define la dinámica completa de un sistema, restando la energía potencial de la cinética:
+        </p>
+        <div class="equation-display">
+          \[ L = T - V \]
+        </div>
+        <p>
+          ¿Qué representa \(L\)? No es una energía física real. Es una especie de "diferencia de vitalidad". Si la energía potencial es alta, el sistema está "acumulando tensión"; si la energía cinética es alta, está en plena "actividad". El Lagrangiano mide la diferencia neta entre la actividad del movimiento y la tensión espacial acumulada.
+        </p>
+        <p>
+          Toda la dinámica física de un péndulo, de un planeta o del universo entero está codificada en este único término.
+        </p>
+      </div>
+    </section>
+
+    <!-- FASE 6 -->
+    <section class="phase-section reveal" id="fase-6" data-label="Fase 6: Acción">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 06</span>
+          <h2 class="phase-title">La Acción \( S = \int L \, dt \)</h2>
+        </div>
+        <p>
+          Si el Lagrangiano es la "vitalidad" en cada instante de tiempo, la **Acción (\(S\))** es el esfuerzo o "costo total" acumulado a lo largo de toda una trayectoria entre un tiempo inicial \(t_1\) y un tiempo final \(t_2\):
+        </p>
+        <div class="equation-display">
+          \[ S = \int_{t_1}^{t_2} L \, dt \]
+        </div>
+        <p>
+          Imagina que quieres ir de excursión del punto A al punto B cruzando un valle montañoso. Cada ruta tiene un coste de energía física diferente. La acción es el "presupuesto total" que le costaría al universo permitir una trayectoria particular.
+        </p>
+        <p>
+          El gran secreto del cosmos es que <b>el universo elige el camino que minimiza (o hace estacionaria) esta acción total</b>.
+        </p>
+
+        <!-- Simulador 2: Principio de Fermat / Acción y Refracción de Luz -->
+        <div class="simulation-card" id="sim-action-card">
+          <div class="simulation-header">
+            <div class="simulation-title">
+              <span style="display:inline-block; width:10px; height:10px; background:var(--accent-gold); border-radius:50%; box-shadow:0 0 8px var(--accent-gold)"></span>
+              Laboratorio: Principio de Fermat y Minimización de Tiempo
+            </div>
+            <button class="btn-sim" id="action-reset">Clásico (Snell)</button>
+          </div>
+          <div class="simulation-body">
+            <div class="simulation-canvas-wrapper">
+              <canvas id="action-canvas" class="simulation-canvas"></canvas>
+            </div>
+            <div class="simulation-controls">
+              <div>
+                <p style="font-size:0.85rem">
+                  Arrastra el <b>nodo dorado</b> sobre la interfaz agua/aire. Observa cómo cambia la trayectoria y el tiempo total.
+                </p>
+                <div class="control-group" style="margin-top: 1.5rem">
+                  <div class="control-label">
+                    <span>Índice Aire (\(n_1\))</span>
+                    <span class="control-value" id="val-n1">1.00</span>
+                  </div>
+                  <input type="range" id="param-n1" min="1.0" max="2.0" step="0.1" value="1.0">
+                </div>
+                <div class="control-group">
+                  <div class="control-label">
+                    <span>Índice Agua (\(n_2\))</span>
+                    <span class="control-value" id="val-n2">1.50</span>
+                  </div>
+                  <input type="range" id="param-n2" min="1.0" max="2.5" step="0.1" value="1.5">
+                </div>
+              </div>
+              <div class="simulation-stats">
+                <div class="stat-box">
+                  <div class="stat-label">Tiempo del Camino Elegido</div>
+                  <div class="stat-val" id="stat-current-time">0.00 ns</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">Tiempo Mínimo Posible</div>
+                  <div class="stat-val" id="stat-min-time">0.00 ns</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 7 -->
+    <section class="phase-section reveal" id="fase-7" data-label="Fase 7: Euler-Lagrange">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 07</span>
+          <h2 class="phase-title">Ecuaciones de Euler‑Lagrange</h2>
+        </div>
+        <p>
+          ¿Cómo se traduce la afirmación "la acción debe ser mínima" en una fórmula práctica de cálculo? Mediante el **cálculo de variaciones**.
+        </p>
+        <p>
+          Supón que tomamos una trayectoria real y la modificamos infinitesimalmente en un tramo mediante una variación \(\delta q\). Para que la acción sea estacionaria, el cambio resultante en la acción debe anularse en primer orden: \(\delta S = 0\).
+        </p>
+        <p>
+          Este requisito da origen a las majestuosas **Ecuaciones de Euler-Lagrange**, el núcleo matemático de la física clásica:
+        </p>
+        <div class="equation-display">
+          \[ \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) - \frac{\partial L}{\partial q} = 0 \]
+        </div>
+        <p>
+          Esta única línea sustituye por completo a las tres leyes de Newton. No necesitamos vectores de fuerza individuales; simplemente derivando el Lagrangiano respecto a la posición y la velocidad obtenemos las ecuaciones de movimiento exactas para cualquier sistema.
+        </p>
+
+        <details>
+          <summary>Ver Derivación Matemática</summary>
+          <div class="details-content">
+            <p>Queremos calcular la variación de la acción \(S = \int L(q, \dot{q}, t) dt\):</p>
+            <p>\[ \delta S = \int \left( \frac{\partial L}{\partial q} \delta q + \frac{\partial L}{\partial \dot{q}} \delta \dot{q} \right) dt \]</p>
+            <p>Usando que \(\delta \dot{q} = \frac{d}{dt}(\delta q)\) e integrando por partes el segundo término:</p>
+            <p>\[ \int \frac{\partial L}{\partial \dot{q}} \frac{d}{dt}(\delta q) dt = \left[ \frac{\partial L}{\partial \dot{q}} \delta q \right]_{t_1}^{t_2} - \int \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) \delta q \, dt \]</p>
+            <p>Dado que los extremos son fijos, \(\delta q(t_1) = \delta q(t_2) = 0\), el primer término de la derecha se anula. Sustituyendo de vuelta:</p>
+            <p>\[ \delta S = \int \left[ \frac{\partial L}{\partial q} - \frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) \right] \delta q \, dt = 0 \]</p>
+            <p>Como esto debe cumplirse para cualquier variación arbitraria \(\delta q(t)\), el término dentro de los corchetes debe anularse idénticamente, resultando en la ecuación de Euler-Lagrange.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- FASE 8 -->
+    <section class="phase-section reveal" id="fase-8" data-label="Fase 8: Simetrías">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 08</span>
+          <h2 class="phase-title">Simetrías</h2>
+        </div>
+        <p>
+          Damos un gran salto conceptual. Dejamos atrás las trayectorias para hacernos una pregunta filosófica profunda: ¿Por qué las leyes de la física son invariables?
+        </p>
+        <p>
+          Una **simetría** es una transformación que puedes aplicarle a un objeto físico o sistema matemático que lo deja indistinguible de su estado original.
+        </p>
+        <ul>
+          <li><b>Homogeneidad del espacio:</b> Si realizas un experimento de física en Madrid, obtendrás los mismos resultados que si lo haces en Nueva York o en la Luna. Las leyes no dependen del *dónde*.</li>
+          <li><b>Homogeneidad del tiempo:</b> Si mides la fuerza gravitatoria hoy, será idéntica a la medida hace diez años o dentro de un siglo. Las leyes no dependen del *cuándo*.</li>
+          <li><b>Isotropía del espacio:</b> Las leyes físicas no cambian de forma si giras tu laboratorio 90 grados a la izquierda. No hay direcciones preferentes en el universo vacío.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FASE 9 -->
+    <section class="phase-section reveal" id="fase-9" data-label="Fase 9: Noether">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 09</span>
+          <h2 class="phase-title">El Teorema de Noether</h2>
+        </div>
+        <p>
+          En 1915, la matemática Emmy Noether demostró uno de los teoremas más bellos y trascendentales de toda la historia de la ciencia. Estableció un puente directo e indestructible entre las simetrías y las **leyes de conservación**:
+        </p>
+        <div class="concept-box">
+          <div class="concept-title">
+            <span style="display:inline-block; width:12px; height:12px; background:var(--accent-gold); border-radius:50%"></span>
+            El Vínculo de Noether
+          </div>
+          <p>
+            <b>A cada simetría continua del espacio-tiempo le corresponde una ley de conservación física:</b>
+          </p>
+          <ul>
+            <li>La simetría bajo **traslación espacial** da origen a la <b>Conservación del Momento Lineal</b>.</li>
+            <li>La simetría bajo **traslación temporal** da origen a la <b>Conservación de la Energía</b>.</li>
+            <li>La simetría bajo **rotación** da origen a la <b>Conservación del Momento Angular</b>.</li>
+          </ul>
+        </div>
+        <p>
+          La energía no se conserva "porque sí". Se conserva porque el universo es indistinguible respecto a desplazamientos en el tiempo. La conservación es una propiedad de la simetría geométrica del propio espaciotiempo.
+        </p>
+        <div class="quote-box">
+          "Mi trabajo es la confirmación matemática más hermosa de que la física clásica y la geometría están entrelazadas de raíz."
+          <span class="quote-author">Emmy Noether</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 10 -->
+    <section class="phase-section reveal" id="fase-10" data-label="Fase 10: Momento">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 10</span>
+          <h2 class="phase-title">Momento Generalizado \( p = \frac{\partial L}{\partial \dot{q}} \)</h2>
+        </div>
+        <p>
+          En la escuela nos enseñan que el momento lineal es simplemente la masa por la velocidad (\(p = mv\)). Pero esta definición es limitada y no se sostiene en geometrías complejas.
+        </p>
+        <p>
+          La física analítica redefine el **momento conjugado** de una coordenada generalizada \(q\) como el gradiente o la variación del Lagrangiano respecto a la velocidad \(\dot{q}\):
+        </p>
+        <div class="equation-display">
+          \[ p_i = \frac{\partial L}{\partial \dot{q}_i} \]
+        </div>
+        <p>
+          Si usamos coordenadas polares, la velocidad es angular (\(\dot{\theta}\)) y el momento conjugado resultante es el **momento angular**: \(p_\theta = mr^2\dot{\theta}\). 
+        </p>
+        <p>
+          Esta definición geométrica nos independiza por completo de las masas puntuales cartesianas y nos abre la puerta a magnitudes más abstractas.
+        </p>
+      </div>
+    </section>
+
+    <!-- FASE 11 -->
+    <section class="phase-section reveal" id="fase-11" data-label="Fase 11: Espacio de Fases">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 11</span>
+          <h2 class="phase-title">El Espacio de Fases \( (q, p) \)</h2>
+        </div>
+        <p>
+          En la física de Newton, describimos la trayectoria de un planeta marcando sus posiciones consecutivas en el espacio tridimensional.
+        </p>
+        <p>
+          Pero para la mecánica analítica, el verdadero mapa de la física es el **Espacio de Fases**. Este es un espacio conceptual donde cada estado posible del sistema está representado por un **único punto**. Los ejes de este espacio no son solo posiciones (\(q\)), sino también sus momentos conjugados (\(p\)).
+        </p>
+        <p>
+          Para un oscilador armónico simple (un resorte), el movimiento clásico de ir y venir en el espacio de fases se convierte en un bucle circular suave. La evolución del universo entero no es más que el discurrir de una curva suave a través de un espacio de fases multidimensional.
+        </p>
+      </div>
+    </section>
+
+    <!-- FASE 12 -->
+    <section class="phase-section reveal" id="fase-12" data-label="Fase 12: Hamiltoniano">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 12</span>
+          <h2 class="phase-title">El Hamiltoniano</h2>
+        </div>
+        <p>
+          William Rowan Hamilton se dio cuenta de que podemos pasar de una descripción basada en posiciones y velocidades \((q, \dot{q})\) (Lagrangiano) a una descripción de extrema simetría matemática basada en posiciones y momentos \((q, p)\).
+        </p>
+        <p>
+          Esto se logra mediante una transformación geométrica llamada **Transformación de Legendre**:
+        </p>
+        <div class="equation-display">
+          \[ H(q, p) = \sum p \dot{q} - L \]
+        </div>
+        <p>
+          El **Hamiltoniano (\(H\))** suele equivaler a la energía total del sistema. Lo fascinante son sus ecuaciones de movimiento canonicales, las cuales revelan una simetría geométrica perfecta entre el espacio y el momento:
+        </p>
+        <div class="equation-display">
+          \[ \dot{q} = \frac{\partial H}{\partial p}, \quad \dot{p} = -\frac{\partial H}{\partial q} \]
+        </div>
+        <p>
+          Las posiciones y los momentos se comportan como imágenes de espejo, donde el cambio de uno está dictado por la inclinación del otro en la superficie de energía.
+        </p>
+      </div>
+    </section>
+
+    <!-- FASE 13 -->
+    <section class="phase-section reveal" id="fase-13" data-label="Fase 13: Campos">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 13</span>
+          <h2 class="phase-title">Campos: el universo continuo</h2>
+        </div>
+        <p>
+          Hasta ahora hemos pensado en partículas discretas (bolas de billar, planetas, péndulos). Pero en el universo real, la información no viaja de manera instantánea. Si mueves un electrón aquí, ¿cómo se entera otro electrón en la galaxia de Andrómeda?
+        </p>
+        <p>
+          La respuesta es que el espacio no está vacío. Está lleno de **Campos**.
+        </p>
+        <p>
+          Un campo es una magnitud física distribuida a lo largo del espaciotiempo. Puede ser un **campo escalar** (como la temperatura en cada punto de una habitación, un simple número) o un **campo vectorial** (como la velocidad del viento en un mapa meteorológico, con dirección y magnitud).
+        </p>
+        <p>
+          Las fuerzas no existen. El electrón interactúa directamente con el campo electromagnético local a su alrededor, el cual actúa como un océano de información continuo.
+        </p>
+      </div>
+    </section>
+
+    <!-- FASE 14 -->
+    <section class="phase-section reveal" id="fase-14" data-label="Fase 14: Lagrangianos de Campos">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 14</span>
+          <h2 class="phase-title">Lagrangianos de Campos</h2>
+        </div>
+        <p>
+          ¿Cómo aplicamos el principio de acción a un medio continuo e infinito como un campo?
+        </p>
+        <p>
+          La coordenada discreta \(q(t)\) se convierte ahora en el valor del campo en cada punto del espacio y el tiempo, \(\phi(x, y, z, t)\). El Lagrangiano \(L\) se integra a lo largo del espacio, naciendo la **Densidad Lagrangiana (\(\mathcal{L}\))**:
+        </p>
+        <div class="equation-display">
+          \[ S = \int \mathcal{L}(\phi, \partial_\mu \phi) \, d^4x \]
+        </div>
+        <p>
+          Las ecuaciones de Euler-Lagrange se adaptan a este flujo continuo, relacionando el cambio temporal del campo con sus variaciones espaciales. La dinámica y la geometría se funden en una sola descripción matemática de cuatro dimensiones.
+        </p>
+      </div>
+    </section>
+
+    <!-- FASE 15 -->
+    <section class="phase-section reveal" id="fase-15" data-label="Fase 15: Cuantización">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 15</span>
+          <h2 class="phase-title">¿Por qué aparece la Cuantización?</h2>
+        </div>
+        <p>
+          A finales del siglo XIX, la física clásica parecía completa. Sin embargo, al aplicar las ecuaciones a la luz emitida por un cuerpo caliente (el problema de la **catástrofe ultravioleta**), la teoría predecía que el objeto debía emitir energía infinita en longitudes de onda cortas. Un absurdo evidente.
+        </p>
+        <p>
+          Además, la teoría electromagnética clásica indicaba que los electrones que orbitan alrededor del núcleo de un átomo deberían perder energía constantemente e impactar contra él en una millonésima de segundo. Los átomos no deberían ser estables.
+        </p>
+        <p>
+          Para resolver esto, Max Planck y Niels Bohr descubrieron que los intercambios de energía en el microcosmos no ocurren de forma continua, sino en pequeños paquetes indivisibles llamados **cuantos (quanta)**. El universo físico, a escalas microscópicas, resulta ser granular.
+        </p>
+      </div>
+    </section>
+
+    <!-- FASE 16 -->
+    <section class="phase-section reveal" id="fase-16" data-label="Fase 16: Mecánica Cuántica">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 16</span>
+          <h2 class="phase-title">Mecánica Cuántica</h2>
+        </div>
+        <p>
+          En el mundo clásico, una partícula posee una trayectoria única y definida: una coordenada \(q(t)\). En el mundo cuántico, esa certidumbre se desvanece.
+        </p>
+        <p>
+          El estado de una partícula se describe mediante una **Función de Onda (\(\Psi\))**, cuyas leyes dinámicas están dictadas por la famosa **Ecuación de Schrödinger**:
+        </p>
+        <div class="equation-display">
+          \[ i\hbar \frac{\partial \Psi}{\partial t} = \hat{H}\Psi \]
+        </div>
+        <p>
+          El Hamiltoniano clásico \(\hat{H}\) ya no es un número: se ha convertido en un **operador matemático** que actúa sobre un espacio de vectores infinito. La física cuántica no predice dónde está la partícula con certeza, sino la **amplitud de probabilidad** de encontrarla allí si realizamos una medición.
+        </p>
+      </div>
+    </section>
+
+    <!-- FASE 17 -->
+    <section class="phase-section reveal" id="fase-17" data-label="Fase 17: Feynman">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 17</span>
+          <h2 class="phase-title">La Integral de Caminos de Feynman</h2>
+        </div>
+        <p>
+          Richard Feynman propuso una reinterpretación asombrosa y visual de la mecánica cuántica. En lugar de resolver funciones de onda complejas, sugirió que **para viajar del punto A al punto B, una partícula explora todos los caminos posibles del universo simultáneamente**.
+        </p>
+        <p>
+          La partícula viaja por el camino recto, por la parábola, pero también viaja dando rodeos hasta la constelación de Orión y volviendo. A cada camino posible se le asigna un número complejo representable como una flecha giratoria (fase):
+        </p>
+        <div class="equation-display">
+          \[ \text{Fase} = e^{i S / \hbar} \]
+        </div>
+        <p>
+          La probabilidad total de llegar a B se calcula sumando las fases de todos los caminos posibles.
+        </p>
+        <p>
+          ¿Por qué vemos trayectorias clásicas en nuestro día a día? Debido a que la constante de Planck (\(\hbar\)) es extremadamente pequeña a nivel macroscópico. Para caminos lejanos al clásico, la acción \(S\) cambia drásticamente con pequeñas perturbaciones, haciendo que sus fases roten locamente y se cancelen entre sí. Pero cerca del camino clásico, la acción es **estacionaria** (\(\delta S = 0\)). Los caminos vecinos apuntan en la misma dirección e interfieren constructivamente, haciendo emerger la trayectoria clásica macroscópica.
+        </p>
+
+        <!-- Simulador 3: Integral de Caminos de Feynman (Fase 17) -->
+        <div class="simulation-card" id="sim-feynman-card">
+          <div class="simulation-header">
+            <div class="simulation-title">
+              <span style="display:inline-block; width:10px; height:10px; background:var(--accent-violet); border-radius:50%; box-shadow:0 0 8px var(--accent-violet)"></span>
+              Laboratorio: Integral de Caminos y Suma de Historias
+            </div>
+            <button class="btn-sim" id="feynman-clear">Lanzar Caminos</button>
+          </div>
+          <div class="simulation-body">
+            <div class="simulation-canvas-wrapper">
+              <canvas id="feynman-canvas" class="simulation-canvas"></canvas>
+            </div>
+            <div class="simulation-controls">
+              <div>
+                <p style="font-size:0.85rem">
+                  Desliza para añadir caminos cuánticos. Observa cómo el vector resultante de fase (gráfico inferior izquierdo) se consolida cuando sumas caminos cercanos al clásico.
+                </p>
+                <div class="control-group" style="margin-top: 1.5rem">
+                  <div class="control-label">
+                    <span>Número de Caminos</span>
+                    <span class="control-value" id="val-paths-count">1</span>
+                  </div>
+                  <input type="range" id="param-paths-count" min="1" max="150" step="1" value="1">
+                </div>
+                <div class="control-group">
+                  <div class="control-label">
+                    <span>Fluctuación Cuántica (\(\hbar\) efectiva)</span>
+                    <span class="control-value" id="val-hbar">0.15</span>
+                  </div>
+                  <input type="range" id="param-hbar" min="0.05" max="0.5" step="0.01" value="0.15">
+                </div>
+              </div>
+              <div class="simulation-stats">
+                <div class="stat-box">
+                  <div class="stat-label">Amplitud Resultante (Luz)</div>
+                  <div class="stat-val" id="stat-feynman-amplitude">0.00</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">Interferencia Clásica</div>
+                  <div class="stat-val" id="stat-feynman-coherent">Mínima</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 18 -->
+    <section class="phase-section reveal" id="fase-18" data-label="Fase 18: QFT">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 18</span>
+          <h2 class="phase-title">Teoría Cuántica de Campos</h2>
+        </div>
+        <p>
+          ¿Qué ocurre si unimos la mecánica cuántica con el concepto continuo de campos? Nace la **Teoría Cuántica de Campos (QFT)**.
+        </p>
+        <p>
+          En QFT, las partículas ya no son objetos fundamentales. Un electrón no es una pequeña esfera sólida; es un **cuanto de excitación** del campo electrónico que impregna todo el espacio. Del mismo modo, un fotón es una excitación local del campo electromagnético.
+        </p>
+        <p>
+          El propio "vacío" no está vacío: es un océano de campos en constante fluctuación cuántica, donde se crean y destruyen partículas virtuales de forma continua. Las simetrías que dictan cómo interactúan estos campos entre sí (llamadas **simetrías Gauge**) dan origen a las fuerzas fundamentales del universo (electromagnetismo, fuerza nuclear fuerte y débil).
+        </p>
+      </div>
+    </section>
+
+    <!-- FASE 19 -->
+    <section class="phase-section reveal" id="fase-19" data-label="Fase 19: Relatividad">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 19</span>
+          <h2 class="phase-title">Relatividad General</h2>
+        </div>
+        <p>
+          Paralelamente al desarrollo cuántico, Albert Einstein reformuló el espacio y el tiempo. En su teoría de la **Relatividad General**, la gravedad deja de ser una fuerza que atrae masas a distancia.
+        </p>
+        <p>
+          La gravedad es la manifestación geométrica de la curvatura del propio espaciotiempo provocada por la masa y la energía. La dinámica del universo está gobernada por la **Acción de Einstein-Hilbert**:
+        </p>
+        <div class="equation-display">
+          \[ S = \frac{1}{16\pi G} \int R \sqrt{-g} \, d^4x \]
+        </div>
+        <p>
+          El espaciotiempo es un tejido elástico que se deforma por la materia y le indica a esta cómo debe moverse.
+        </p>
+        <div class="quote-box">
+          "El espacio le dice a la materia cómo moverse; la materia le dice al espacio cómo curvarse."
+          <span class="quote-author">John Archibald Wheeler</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 20 -->
+    <section class="phase-section reveal" id="fase-20" data-label="Fase 20: Gravedad Cuántica">
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-num">Fase 20</span>
+          <h2 class="phase-title">El Choque de Titanes: Gravedad Cuántica</h2>
+        </div>
+        <p>
+          Hemos llegado a la frontera del conocimiento. Por un lado, la **Teoría Cuántica de Campos** nos ofrece una descripción asombrosa del microcosmos, pero asume que el espaciotiempo es plano y estático. Por otro lado, la **Relatividad General** describe un espaciotiempo dinámico y curvado, pero asume que la materia es continua y clásica.
+        </p>
+        <p>
+          Cuando intentamos unir ambas teorías para describir el centro de un agujero negro o el inicio del Big Bang (escalas de longitud de Planck), las ecuaciones nos devuelven **valores infinitos e incoherentes**. La teoría deja de ser renormalizable.
+        </p>
+        <p>
+          El espaciotiempo mismo debe ser cuantizado. Teorías candidatas como la **Gravedad Cuántica de Lazos** sugieren que el espacio no es un fondo continuo, sino una red de lazos discretos interconectados. La **Teoría de Cuerdas** propone que las partículas puntuales son en realidad cuerdas vibrantes en diez dimensiones.
+        </p>
+        <p>
+          La respuesta definitiva aún no ha sido escrita. El viaje por comprender cómo piensa la naturaleza continúa en las mentes de los científicos de hoy.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:1.5rem">
+          <div class="logo-dot"></div>
+          <span>Geometría & Gravedad</span>
+        </div>
+        <p>Una expedición interactiva por el corazón de la física teórica clásica y cuántica.</p>
+      </div>
+      <div class="footer-links-group">
+        <div class="footer-col">
+          <span class="footer-col-title">Temas</span>
+          <a href="#fase-0">Filosofía</a>
+          <a href="#fase-5">Mecánica Analítica</a>
+          <a href="#fase-15">Física Cuántica</a>
+          <a href="#fase-20">Gravedad Cuántica</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Créditos</span>
+          <a href="https://github.com/willkwolf/QFT-Intro" target="_blank">Repositorio QFT-Intro</a>
+          <a href="https://mathjax.org" target="_blank">MathJax Engine</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Geometría & Gravedad. Todos los derechos reservados.</span>
+      <span>Creado para la divulgación científica premium.</span>
+    </div>
+  </footer>
+
+  <script src="simulations.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
