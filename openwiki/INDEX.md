@@ -55,3 +55,10 @@ Para añadir un nuevo tema o hoja interactiva al repositorio:
 2. **Implementar la ruta interactiva:** Crear `src/app/[nombre-del-tema]/page.tsx` reutilizando los componentes de `src/components/` (`Math`, `NotationContext`, etc.).
 3. **Vincular en la navegación global:** Añadir el enlace en `src/components/Navigation.tsx` y en el Dashboard de `src/app/page.tsx`.
 4. **Actualizar el índice de OpenWiki:** Registrar el nuevo artefacto en este archivo.
+
+---
+
+## 🤖 Integración con Agentes y Orquestadores
+
+El manifiesto de OpenWiki está estandarizado como habilidad portable para agentes AI en [`skills/openwiki-architecture/SKILL.md`](../skills/openwiki-architecture/SKILL.md). Puede conectarse a cualquier harness (Antigravity, Claude Code, Codex, OpenHarness) para asistir en decisiones de arquitectura y propuestas técnicas antes de generar código.
+

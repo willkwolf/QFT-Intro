@@ -43,3 +43,14 @@ Cuando el usuario pida desarrollar un nuevo tema interactivo:
 2. **Paso 2 (Página Interactiva):** Crear `src/app/[nombre]/page.tsx` integrando texto riguroso, fórmulas con KaTeX (`<MathEq />`), y simulaciones visuales (SVG o Canvas).
 3. **Paso 3 (Navegación):** Registrar la nueva ruta en `src/components/Navigation.tsx` y en la lista `studyModules` de `src/app/page.tsx`.
 4. **Paso 4 (Verificación):** Ejecutar `npm run build` para asegurar que el empaquetado estático genere el archivo HTML sin errores.
+
+---
+
+## 5. Integración como Skill en Orquestadores y Harnesses
+
+El contrato arquitectónico del repositorio está empaquetado como una habilidad portable en [`skills/openwiki-architecture/SKILL.md`](skills/openwiki-architecture/SKILL.md).
+
+Se utiliza como complemento en flujos de **Project Management / Product Engineering** (ej. [`product-engineering`](https://github.com/phuryn/product-engineering)) durante las fases de **Proposal** y **Decisiones de Arquitectura**:
+- Asegura que ninguna ecuación o lógica de dominio quede atrapada en callbacks de interfaz o renderizado.
+- Enlaza cualquier nueva propuesta técnica con un dominio formal verificable en `openwiki/domains/`.
+- Permite a agentes en **Claude Code**, **Antigravity** o **OpenAI Codex** heredar automáticamente el contrato de diseño tripartito (`architecture/`, `domains/`, `resources/`).
